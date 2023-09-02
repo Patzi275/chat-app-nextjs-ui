@@ -19,5 +19,6 @@
 
 .time {
     display: flex;
+    margin-right: 1.5rem;
     gap: .7rem;
 }

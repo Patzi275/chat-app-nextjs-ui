@@ -1,0 +1,60 @@
+.thread-container {
+    position: relative;
+    padding: 1rem;
+    padding-top: 8rem;
+    background-color: var(--light-gray-2);
+}
+
+.message-form {
+    display: flex;
+    gap: 1rem;
+    margin: 3rem 0;
+}
+
+.message-form .input {
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    flex: 1;
+    border: none;
+    border-radius: var(--border-radius);
+}
+
+.message-form .input:focus-visible {
+    outline: 1px solid var(--primary-color);
+}
+
+.message-form .button {
+    width: 3rem;
+    height: 3rem;
+    padding: .2rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.message-form .button svg {
+    color: white;
+}
+
+
+@media screen and (min-width: 768px) {
+
+    .panel {
+        display: flex !important;
+        flex-direction: column;
+    }
+
+    .thread-container {
+        border-radius: calc(var(--border-radius)*2);
+        overflow-y: scroll;
+    }
+
+    .thread {
+        padding: 6rem 2rem 0rem 5rem;
+    }
+
+    .message-form {
+        margin: 3rem 2rem;
+    }
+}

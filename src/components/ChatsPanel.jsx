@@ -1,7 +1,8 @@
 import ChatTile from "./ChatTile";
 import SearchBar from "./SearchBar";
+import styles from "@/styles/ChatsPanel.module.css";
 
-export default function ChatsPanel() {
+export default function ChatsPanel({onChatClick, isHidden}) {
     const chatInfo = {
         profilePicUrl: '/images/user.png',
         isOnline: false,
@@ -13,14 +14,14 @@ export default function ChatsPanel() {
     };
 
     return (
-        <div className="chats-panel">
+        <div className={styles.panel + (isHidden ? ' hidden' : '')}>
             <SearchBar />
-            <div className="chats-panel__tile-list">
-                <ChatTile data={chatInfo} />
-                <ChatTile data={{...chatInfo, isOnline: true, isSent: true}} active={true}/>
-                <ChatTile data={{...chatInfo, nbUnread: 3}} />
-                <ChatTile data={{...chatInfo, isOnline: true, nbUnread: 3}}/>
-                <ChatTile data={{...chatInfo, isSent: true}} />
+            <div className={styles['chats-list']}>
+                <ChatTile onClick={onChatClick} data={chatInfo} />
+                <ChatTile onClick={onChatClick} data={{...chatInfo, isOnline: true, isSent: true}} active={true}/>
+                <ChatTile onClick={onChatClick} data={{...chatInfo, nbUnread: 3}} />
+                <ChatTile onClick={onChatClick} data={{...chatInfo, isOnline: true, nbUnread: 3}}/>
+                <ChatTile onClick={onChatClick} data={{...chatInfo, isSent: true}} />
             </div>
         </div>
     )

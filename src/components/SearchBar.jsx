@@ -1,8 +1,10 @@
+import styles from "@/styles/SearchBar.module.css";
+
 export default function SearchBar() {
   return (
-    <div className="search-bar">
-      <svg class="search-bar__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-      <input class="search-bar__input" type="text" name="search" id="search"
+    <div className={styles.container}>
+      <svg className={styles.icon} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      <input className={styles.input} type="text" name="search" id="search"
         placeholder="Search"
       />
     </div>

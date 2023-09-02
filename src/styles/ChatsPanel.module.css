@@ -1,0 +1,25 @@
+.panel {
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.chats-list {
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+
+    .panel {
+        display: flex !important;
+        padding: 0;
+        width: 60rem;
+    }
+
+    .chats-list {
+        overflow-y: scroll;
+    }
+}

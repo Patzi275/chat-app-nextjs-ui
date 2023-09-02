@@ -7,10 +7,11 @@ export default function PeerMessage({ message }) {
         <div className={styles['message-wrapper']}>
             <Avatar 
                 src="/images/user.png"
+                size={32}
                 className={styles.avatar}
             />
             <div className={styles.message}>
-                <div className={styles.content}>
+                <div className={styles.content + ' shadow' }>
                     {message.content}
                 </div>
                 <div className={styles.time}>{message.sentAt}</div>

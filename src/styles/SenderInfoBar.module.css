@@ -1,12 +1,13 @@
 .bar {
+    position: fixed;
+    z-index: 99;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    position: fixed;
     width: 100%;
     background-color: white;
-    box-shadow: 5px 0 10px var(--light-gray);
+    box-shadow: 5px 0 10px var(--light-gray-2);
 }
 
 .profile {
@@ -21,6 +22,7 @@
 }
 
 .name {
+    color: var(--dark);
     font-weight: 900;
     font-size: 1rem;
 }
@@ -32,15 +34,40 @@
 }
 
 .actions {
-    color: var(--light-gray);
+    color: var(--light-gray-3);
 }
 
 .actions a {
     padding: .3rem;
     border-radius: 4px;
+    transition: all 200ms ease-in;
 }
 
 .actions a:hover {
-    background-color: var(--dark);
-    color: white;
+
+    color: var(--dark);
+    scale: 1.4;
+}
+
+@media screen and (min-width: 768px) {
+    .bar {
+        position: relative;
+        box-shadow: none;
+        padding-top: 0;
+        margin-bottom: 1rem;
+    }
+
+    .avatar {
+        width: 3.5rem;
+        height: 3.5rem;
+        margin-left: 2rem;
+    }
+
+    .name {
+        font-size: 1.4rem;
+    }
+
+    .actions {
+        gap: 2.5rem;
+    }
 }

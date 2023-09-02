@@ -1,17 +1,21 @@
 import Avatar from "./Avatar";
 import styles from "@/styles/ChatTile.module.css";
 
-export default function ChatTile({ data, active }) {
+export default function ChatTile({ data, active, onClick }) {
     const message = data.lastMessage.substr(0, 40) + '...';
     const onlineStatusStyle = data.isOnline ? styles['online-dot'] : '';
     const selectedStyle = active ? styles.tile__selected : '';
 
     return (
-        <div className={`${styles.tile} ${selectedStyle}`}>
+        <a 
+            href="javascript:void(0)"
+            className={`${styles.tile} ${selectedStyle} shadow`}
+            onClick={onClick}
+        >
             <div className={styles['avatar-container']}>
                 <Avatar
                     src={data.profilePicUrl}
-                    size={64}
+                    size={48}
                     className={styles.avatar}
                 />
                 <div className={onlineStatusStyle}></div>
@@ -38,6 +42,6 @@ export default function ChatTile({ data, active }) {
                         : null
             }
 
-        </div>
+        </a>
     );
 }

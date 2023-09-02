@@ -3,7 +3,7 @@ import styles from '@/styles/UserMessage.module.css';
 export default function UserMessage({ message }) {
     return (
         <div className={styles.message}>
-            <div className={styles.content}>
+            <div className={styles.content + ' shadow'}>
                 {message.content}
             </div>
             {

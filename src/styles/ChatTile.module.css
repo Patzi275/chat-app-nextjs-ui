@@ -1,11 +1,16 @@
 .tile {
     position: relative;
-    background-color: var(--light-gray-soft);
+    background-color: var(--light-gray-1);
     display: flex;
     padding: 1.5rem 1rem;
-    min-width: 20rem;
     margin-bottom: 2rem;
+    min-width: 20rem;
+    width: 100%;
     border-radius: var(--border-radius);
+}
+
+.tile:not(.tile__selected):hover {
+    background-color: var(--light-gray-2);
 }
 
 .avatar-container {
@@ -24,14 +29,18 @@
     width: .7rem;
     height: .7rem;
     position: absolute;
-    top: 5px;
-    right: 1.2rem;
+    top: 25%;
+    right: 25%;
     background-color: var(--green);
     border-radius: 999px;
 }
 
 .tile__selected {
     background-color: var(--primary-color);
+    color: white;
+}
+
+.tile__selected .name {
     color: white;
 }
 
@@ -46,6 +55,7 @@
 .infos-container {
     display: flex;
     flex: 2;
+    gap: .4rem;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -59,14 +69,11 @@
 .name {
     font-weight: 900;
     font-size: 1.1rem;
+    color: var(--dark);
 }
 
 .date {
     font-size: small;
-}
-
-.message, .date {
-    opacity: .7;
 }
 
 .badge {
