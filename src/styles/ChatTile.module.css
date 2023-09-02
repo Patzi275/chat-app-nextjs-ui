@@ -1,0 +1,88 @@
+.tile {
+    position: relative;
+    background-color: var(--light-gray-soft);
+    display: flex;
+    padding: 1.5rem 1rem;
+    min-width: 20rem;
+    margin-bottom: 2rem;
+    border-radius: var(--border-radius);
+}
+
+.avatar-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.avatar {
+    margin: auto;
+}
+
+.online-dot {
+    width: .7rem;
+    height: .7rem;
+    position: absolute;
+    top: 5px;
+    right: 1.2rem;
+    background-color: var(--green);
+    border-radius: 999px;
+}
+
+.tile__selected {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.tile__selected .avatar {
+    background-color: var(--primary-color-darken);
+}
+
+.tile__selected .badge--read path {
+    stroke: white;
+}
+
+.infos-container {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.infos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.name {
+    font-weight: 900;
+    font-size: 1.1rem;
+}
+
+.date {
+    font-size: small;
+}
+
+.message, .date {
+    opacity: .7;
+}
+
+.badge {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: .4rem;
+    bottom: .4rem;
+    width: 1.3rem;
+    height: 1.3rem;
+}
+
+.badge--count {
+    border-radius: 999px;
+    font-weight: bold;
+    color: white;
+    background-color: var(--green);
+}

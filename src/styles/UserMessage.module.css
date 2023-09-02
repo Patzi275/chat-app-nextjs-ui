@@ -1,0 +1,23 @@
+.message {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: .3rem;
+    margin-bottom: 1rem;
+}
+
+.message:not(:has(+ .message)) .content {
+    border-bottom-right-radius: calc(var(--border-radius)/3);
+}
+
+.content {
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    padding: var(--message-box-padding);
+    color: white;
+}
+
+.time {
+    display: flex;
+    gap: .7rem;
+}

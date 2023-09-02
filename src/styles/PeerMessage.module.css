@@ -1,0 +1,24 @@
+.message-wrapper {
+
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    margin-bottom: 1rem;
+}
+
+.message-wrapper:not(:has(+ .message-wrapper)) .content {
+    border-bottom-left-radius: calc(var(--border-radius)/3);
+}
+
+.content {
+    border-radius: var(--border-radius);
+    padding: var(--message-box-padding);
+    background-color: white;
+}
+
+.avatar {
+    display: none;
+}
